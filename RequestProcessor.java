@@ -18,7 +18,8 @@ public class RequestProcessor {
             System.out.println("Requete reçue: " + request.getMethod() + " " + request.getUrl());
 
             if ("/".equals(request.getUrl())) {
-                response.sendOk("<h1>Salut</h1>");
+                response.sendOk("Salut, bienvenue sur mon serveur");
+                response.sendContent("text/html", "<h1>Hello World!</h1>");
             } else {
                 response.sendNotFound("Pas d'URL correspondante");
             }
