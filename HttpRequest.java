@@ -11,15 +11,13 @@ public class HttpRequest {
         String response = input.readLine();
         if (response != null){
             String[] parts = response.split(" ");
-            if(parts.length>=2){
-                method = parts[0];
-                Url = parts[1];
-            }
+            method = parts[0];
+            Url = parts[1];
         }
     }
 
-    public HttpRequest(Socket Socket) throws IOException {
-        readClientRequest(Socket);
+    public HttpRequest(Socket socket) throws IOException {
+        readClientRequest(socket);
     }
     public String getMethod() {
         return method;

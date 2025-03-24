@@ -19,7 +19,7 @@ public class HttpResponse {
 
     public void sendOk(String message) throws IOException {
         String response = "HTTP/1.0 200 OK\r\n" +
-                "Content-Type: text/html\r\n\r\n" +
+                "Content-Type: text/plain\r\n\r\n" +
                 message;
         output.write(response.getBytes());
         output.flush();

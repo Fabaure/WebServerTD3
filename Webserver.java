@@ -13,7 +13,7 @@ public class Webserver {
             while (true) {
                 Socket Socket = serverSocket.accept();
                 System.out.println("Connexion acceptee");
-                new RequestProcessor(Socket).run();
+                new RequestProcessor(Socket);
             }
         } catch (IOException e) {
             e.printStackTrace();}
